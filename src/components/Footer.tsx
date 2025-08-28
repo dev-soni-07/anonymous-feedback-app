@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="text-center p-4 md:p-6 bg-gray-900 text-white">
             <p className="text-sm md:text-base lg:text-lg">
-                Anonymous Feedback &copy; 2024. All rights reserved.
+                Anonymous Feedback &copy; 2025. All rights reserved.
             </p>
             <p className="text-sm md:text-base lg:text-lg">
                 Made with ❤️ by{' '}
