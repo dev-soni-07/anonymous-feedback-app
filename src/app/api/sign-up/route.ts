@@ -50,12 +50,15 @@ export async function POST(request: Request) {
                     }
                 );
             } else {
-                const hashedPassword = await bcrypt.hash(password, 10);
-                existingUserVerifiedByEmail.password = hashedPassword;
-                existingUserVerifiedByEmail.verifyCode = verifyCode;
-                existingUserVerifiedByEmail.verifyCodeExpiry = new Date(Date.now() + 3600000);
-
-                await existingUserVerifiedByEmail.save();
+                //TODO: Update the logic later
+                // if (existingUserVerifiedByEmail) {
+                //     const hashedPassword = await bcrypt.hash(password, 10);
+                //     existingUserVerifiedByEmail.password = hashedPassword;
+                //     existingUserVerifiedByEmail.verifyCode = verifyCode;
+                //     existingUserVerifiedByEmail.verifyCodeExpiry = new Date(Date.now() + 3600000);
+    
+                //     await existingUserVerifiedByEmail.save();
+                // }
             }
         } else {
             const hashedPassword = await bcrypt.hash(password, 10);
